@@ -29,9 +29,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="LazyDataReader\**" />
-    <EmbeddedResource Remove="LazyDataReader\**" />
-    <None Remove="LazyDataReader\**" />
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
   </ItemGroup>
 
 </Project>
