@@ -12,9 +12,9 @@ namespace LazyDataReader
 
         public static T GetData(string path)
         {
-            var data = ReadData(path);
+            var result = ReadData(path);
 
-            return data;
+            return result;
         }
 
         #endregion Public Methods
@@ -38,15 +38,15 @@ namespace LazyDataReader
                 {
                     using (var namespaceIgnorantReader = new NamespaceIgnorantReader(reader))
                     {
-                        result = serializer.Deserialize(namespaceIgnorantReader) as T;
+                        result = (T)serializer.Deserialize(namespaceIgnorantReader);
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
                 throw new ApplicationException(
                     message: $"The file '{path}' cannot be red.",
-                    innerException: ex);
+                    innerException: exception);
             }
 
             return result;
