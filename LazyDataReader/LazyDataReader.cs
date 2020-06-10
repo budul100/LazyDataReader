@@ -5,14 +5,16 @@ using System.Xml.Serialization;
 
 namespace LazyDataReader
 {
-    public static class Reader<T>
-        where T : class
+    public static class Reader
     {
         #region Public Methods
 
-        public static T GetData(string path)
+        public static T GetData<T>(string path, string rootElement = default)
+            where T : class
         {
-            var result = ReadData(path);
+            var result = ReadData<T>(
+                path: path,
+                rootElement: rootElement);
 
             return result;
         }
@@ -21,18 +23,55 @@ namespace LazyDataReader
 
         #region Private Methods
 
-        private static T ReadData(string path)
+        private static XmlRootAttribute GetRoot(string rootElement)
+        {
+            var result = new XmlRootAttribute
+            {
+                ElementName = rootElement,
+                IsNullable = true,
+            };
+            // result.Namespace = "http://www.cpandl.com";
+
+            return result;
+        }
+
+        private static XmlSerializer GetSerializer<T>()
+            where T : class
+        {
+            var result = new XmlSerializer(
+                type: typeof(T),
+                defaultNamespace: string.Empty);
+
+            return result;
+        }
+
+        private static XmlSerializer GetSerializer<T>(string rootElement)
+            where T : class
+        {
+            var root = GetRoot(rootElement);
+
+            var result = new XmlSerializer(
+                type: typeof(T),
+                root: root);
+
+            return result;
+        }
+
+        private static T ReadData<T>(string path, string rootElement)
+            where T : class
         {
             var result = default(T);
 
             if (!File.Exists(path))
+            {
                 throw new FileNotFoundException($"The file '{path}' does not exist.");
+            }
 
             try
             {
-                var serializer = new XmlSerializer(
-                    type: typeof(T),
-                    defaultNamespace: string.Empty);
+                var serializer = string.IsNullOrWhiteSpace(rootElement)
+                    ? GetSerializer<T>()
+                    : GetSerializer<T>(rootElement);
 
                 using (StreamReader reader = new StreamReader(path))
                 {
