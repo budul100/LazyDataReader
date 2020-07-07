@@ -143,7 +143,7 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     // [System.Xml.Serialization.XmlRootAttribute("trafficNetwork", Namespace = "http://intf.mb.ivu.de/", IsNullable = false)]
-    // [System.Xml.Serialization.XmlRootAttribute("trafficNetwork", IsNullable = true)]
+    [System.Xml.Serialization.XmlRootAttribute("trafficNetwork", IsNullable = true)]
     public partial class TrafficNetworkWithoutRoot
     {
         #region Private Fields

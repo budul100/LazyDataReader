@@ -1,4 +1,4 @@
-﻿using LazyDataReader.Models;
+﻿using LazyDataReader.Readers;
 using System;
 using System.IO;
 using System.Xml.Serialization;
@@ -9,12 +9,18 @@ namespace LazyDataReader
     {
         #region Public Methods
 
-        public static T GetData<T>(string path, string rootElement = default)
+        public static T GetData<T>(string path, string classNamespaceUri, string fileNamespaceUri)
             where T : class
         {
+            if (!File.Exists(path))
+            {
+                throw new FileNotFoundException($"The file '{path}' does not exist.");
+            }
+
             var result = ReadData<T>(
                 path: path,
-                rootElement: rootElement);
+                fileNamespaceUri: fileNamespaceUri,
+                classNamespaceUri: classNamespaceUri);
 
             return result;
         }
@@ -23,61 +29,23 @@ namespace LazyDataReader
 
         #region Private Methods
 
-        private static XmlRootAttribute GetRoot(string rootElement)
-        {
-            var result = new XmlRootAttribute
-            {
-                ElementName = rootElement,
-                IsNullable = true,
-            };
-            // result.Namespace = "http://www.cpandl.com";
-
-            return result;
-        }
-
-        private static XmlSerializer GetSerializer<T>()
-            where T : class
-        {
-            var result = new XmlSerializer(
-                type: typeof(T),
-                defaultNamespace: string.Empty);
-
-            return result;
-        }
-
-        private static XmlSerializer GetSerializer<T>(string rootElement)
-            where T : class
-        {
-            var root = GetRoot(rootElement);
-
-            var result = new XmlSerializer(
-                type: typeof(T),
-                root: root);
-
-            return result;
-        }
-
-        private static T ReadData<T>(string path, string rootElement)
+        private static T ReadData<T>(string path, string classNamespaceUri, string fileNamespaceUri)
             where T : class
         {
             var result = default(T);
 
-            if (!File.Exists(path))
-            {
-                throw new FileNotFoundException($"The file '{path}' does not exist.");
-            }
-
             try
             {
-                var serializer = string.IsNullOrWhiteSpace(rootElement)
-                    ? GetSerializer<T>()
-                    : GetSerializer<T>(rootElement);
+                var serializer = new XmlSerializer(typeof(T));
 
-                using (StreamReader reader = new StreamReader(path))
+                using (var textReader = new StreamReader(path))
                 {
-                    using (var namespaceIgnorantReader = new NamespaceIgnorantReader(reader))
+                    using (var xmlReader = new NamespaceReplaceReader(
+                        reader: textReader,
+                        fileNamespaceUri: fileNamespaceUri,
+                        classNamespaceUri: classNamespaceUri))
                     {
-                        result = (T)serializer.Deserialize(namespaceIgnorantReader);
+                        result = serializer.Deserialize(xmlReader) as T;
                     }
                 }
             }
