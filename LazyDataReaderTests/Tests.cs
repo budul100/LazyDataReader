@@ -12,6 +12,16 @@ namespace LazyDataReaderTests
         {
             var data = Reader.GetData<StandardTrafficNetworkWithoutRoot.TrafficNetworkWithoutRoot>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WithNS.xml",
+                classNamespaceUri: "");
+
+            Assert.NotNull(data);
+        }
+
+        [Test]
+        public void TestWithoutRootAndReplace()
+        {
+            var data = Reader.GetData<StandardTrafficNetworkWithoutRoot.TrafficNetworkWithoutRoot>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WithNS.xml",
                 classNamespaceUri: "",
                 fileNamespaceUri: "http://intf.mb.ivu.de/");
 
@@ -23,8 +33,7 @@ namespace LazyDataReaderTests
         {
             var data = Reader.GetData<StandardTrafficNetworkWithRoot.TrafficNetworkWithRoot>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WithNS.xml",
-                classNamespaceUri: "http://intf.mb.ivu.de/",
-                fileNamespaceUri: "http://intf.mb.ivu.de/");
+                classNamespaceUri: "http://intf.mb.ivu.de/");
 
             Assert.NotNull(data);
         }

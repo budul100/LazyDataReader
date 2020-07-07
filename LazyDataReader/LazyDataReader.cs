@@ -9,6 +9,15 @@ namespace LazyDataReader
     {
         #region Public Methods
 
+        public static T GetData<T>(string path, string classNamespaceUri)
+            where T : class
+        {
+            return GetData<T>(
+                path: path,
+                classNamespaceUri: classNamespaceUri,
+                fileNamespaceUri: default);
+        }
+
         public static T GetData<T>(string path, string classNamespaceUri, string fileNamespaceUri)
             where T : class
         {
