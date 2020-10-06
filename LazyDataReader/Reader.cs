@@ -9,7 +9,7 @@ namespace LazyDataReader
     {
         #region Public Methods
 
-        public static T GetFromFile<T>(string path, string classNamespaceUri)
+        public static T GetFromFile<T>(string path, string classNamespaceUri = default)
             where T : class
         {
             return GetFromFile<T>(
@@ -18,7 +18,7 @@ namespace LazyDataReader
                 fileNamespaceUri: default);
         }
 
-        public static T GetFromFile<T>(string path, string classNamespaceUri, string fileNamespaceUri)
+        public static T GetFromFile<T>(string path, string fileNamespaceUri, string classNamespaceUri)
             where T : class
         {
             if (!File.Exists(path))
@@ -45,7 +45,7 @@ namespace LazyDataReader
             return result;
         }
 
-        public static T GetFromText<T>(string text, string classNamespaceUri)
+        public static T GetFromText<T>(string text, string classNamespaceUri = default)
             where T : class
         {
             return GetFromText<T>(
@@ -54,7 +54,7 @@ namespace LazyDataReader
                 fileNamespaceUri: default);
         }
 
-        public static T GetFromText<T>(string text, string classNamespaceUri, string fileNamespaceUri)
+        public static T GetFromText<T>(string text, string fileNamespaceUri, string classNamespaceUri)
             where T : class
         {
             var result = default(T);
@@ -80,7 +80,7 @@ namespace LazyDataReader
 
         #region Private Methods
 
-        private static T GetData<T>(Func<TextReader> textReaderGetter, string classNamespaceUri, string fileNamespaceUri)
+        private static T GetData<T>(Func<TextReader> textReaderGetter, string fileNamespaceUri, string classNamespaceUri)
             where T : class
         {
             var result = default(T);

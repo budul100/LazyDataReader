@@ -1,4 +1,4 @@
-﻿namespace StandardTrafficNetworkWithRoot
+﻿namespace TrafficNetworkONS
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
@@ -136,14 +136,12 @@
         #endregion Public Properties
     }
 
-    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
-    [System.Xml.Serialization.XmlRootAttribute("trafficNetwork", Namespace = "http://intf.mb.ivu.de/", IsNullable = false)]
-    public partial class TrafficNetworkWithRoot
+    [System.Xml.Serialization.XmlRootAttribute("trafficNetwork", IsNullable = true)]
+    public partial class TrafficNetwork
     {
         #region Private Fields
 

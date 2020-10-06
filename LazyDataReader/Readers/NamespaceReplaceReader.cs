@@ -15,11 +15,11 @@ namespace LazyDataReader.Readers
 
         #region Public Constructors
 
-        public NamespaceReplaceReader(TextReader reader, string classNamespaceUri, string fileNamespaceUri)
+        public NamespaceReplaceReader(TextReader reader, string fileNamespaceUri, string classNamespaceUri)
             : base(reader)
         {
-            this.classNamespaceUri = classNamespaceUri;
-            this.fileNamespaceUri = fileNamespaceUri;
+            this.classNamespaceUri = classNamespaceUri ?? string.Empty;
+            this.fileNamespaceUri = fileNamespaceUri ?? string.Empty;
         }
 
         #endregion Public Constructors

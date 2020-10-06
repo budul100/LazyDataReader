@@ -8,20 +8,29 @@ namespace LazyDataReaderTests
         #region Public Methods
 
         [Test]
-        public void TestWithoutRoot()
+        public void TestFileOClassO()
         {
-            var data = Reader.GetFromFile<StandardTrafficNetworkWithoutRoot.TrafficNetworkWithoutRoot>(
-                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WithNS.xml",
-                classNamespaceUri: "");
+            var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS.xml");
 
             Assert.NotNull(data);
         }
 
         [Test]
-        public void TestWithoutRootAndReplace()
+        public void TestFileOClassW()
         {
-            var data = Reader.GetFromFile<StandardTrafficNetworkWithoutRoot.TrafficNetworkWithoutRoot>(
-                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WithNS.xml",
+            var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS.xml",
+                classNamespaceUri: "http://intf.mb.ivu.de/");
+
+            Assert.NotNull(data);
+        }
+
+        [Test]
+        public void TestFileWClassO()
+        {
+            var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml",
                 classNamespaceUri: "",
                 fileNamespaceUri: "http://intf.mb.ivu.de/");
 
@@ -29,10 +38,10 @@ namespace LazyDataReaderTests
         }
 
         [Test]
-        public void TestWithRoot()
+        public void TestFileWClassW()
         {
-            var data = Reader.GetFromFile<StandardTrafficNetworkWithRoot.TrafficNetworkWithRoot>(
-                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WithNS.xml",
+            var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml",
                 classNamespaceUri: "http://intf.mb.ivu.de/");
 
             Assert.NotNull(data);
