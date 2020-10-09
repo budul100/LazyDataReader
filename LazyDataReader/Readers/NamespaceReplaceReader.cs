@@ -18,8 +18,8 @@ namespace LazyDataReader.Readers
         public NamespaceReplaceReader(TextReader reader, string fileNamespaceUri, string classNamespaceUri)
             : base(reader)
         {
-            this.classNamespaceUri = classNamespaceUri ?? string.Empty;
-            this.fileNamespaceUri = fileNamespaceUri ?? string.Empty;
+            this.classNamespaceUri = classNamespaceUri;
+            this.fileNamespaceUri = fileNamespaceUri;
         }
 
         #endregion Public Constructors
@@ -38,7 +38,7 @@ namespace LazyDataReader.Readers
                 && (fileNamespaceUri == default
                 || base.NamespaceURI == fileNamespaceUri))
             {
-                return classNamespaceUri;
+                return classNamespaceUri ?? string.Empty;
             }
             else
             {

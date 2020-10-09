@@ -8,6 +8,15 @@ namespace LazyDataReaderTests
         #region Public Methods
 
         [Test]
+        public void IgnoreNamespace()
+        {
+            var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml");
+
+            Assert.NotNull(data);
+        }
+
+        [Test]
         public void TestFileOClassO()
         {
             var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
