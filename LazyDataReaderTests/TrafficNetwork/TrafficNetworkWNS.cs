@@ -1,10 +1,6 @@
 ﻿namespace TrafficNetworkWNS
 {
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class NetworkPointArea
     {
@@ -45,6 +41,7 @@
         }
 
         /// <remarks/>
+        [System.Xml.Serialization.XmlElement("validity", Namespace = "http://test.de/")]
         public Validity validity
         {
             get
@@ -60,11 +57,7 @@
         #endregion Public Properties
     }
 
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class NetworkPointAreaKey
     {
@@ -136,11 +129,7 @@
         #endregion Public Properties
     }
 
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute("trafficNetwork", Namespace = "http://intf.mb.ivu.de/", IsNullable = false)]
     public partial class TrafficNetwork
     {
@@ -169,12 +158,8 @@
         #endregion Public Properties
     }
 
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
+    [System.Xml.Serialization.XmlRootAttribute("validity", Namespace = "http://test.de/", IsNullable = false)]
     public partial class Validity
     {
         #region Private Fields

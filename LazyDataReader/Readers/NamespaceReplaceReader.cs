@@ -34,9 +34,11 @@ namespace LazyDataReader.Readers
 
         private string GetNamespaceUri()
         {
-            if (NodeType != XmlNodeType.Attribute
-                && (fileNamespaceUri == default
-                || base.NamespaceURI == fileNamespaceUri))
+            if (string.IsNullOrWhiteSpace(classNamespaceUri))
+            {
+                return string.Empty;
+            }
+            if (base.NamespaceURI == (fileNamespaceUri ?? string.Empty))
             {
                 return classNamespaceUri ?? string.Empty;
             }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trafficNetwork xmlns="http://intf.mb.ivu.de/">
+<trafficNetwork xmlns="http://intf.mb.ivu.de/" xmlns:test="http://test.de/">
 	<networkPointAreas>
 		<networkPointArea>
 			<networkPointAreaKey>
@@ -8,10 +8,10 @@
 				<type>StopArea</type>
 			</networkPointAreaKey>
 			<description>ATHERSTONE</description>
-			<validity>
+			<test:validity>
 				<fromDate>2019-12-15</fromDate>
 				<toDate>2019-12-15</toDate>
-			</validity>
+			</test:validity>
 		</networkPointArea>
 	</networkPointAreas>
 </trafficNetwork>
