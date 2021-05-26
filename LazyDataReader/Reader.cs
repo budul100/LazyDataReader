@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Xml.Serialization;
+using UtfUnknown;
 
 namespace LazyDataReader
 {
@@ -30,8 +31,14 @@ namespace LazyDataReader
 
             try
             {
+                var detection = CharsetDetector.DetectFromFile(path);
+
+                TextReader textReaderGetter() => new StreamReader(
+                    path: path,
+                    encoding: detection.Detected.Encoding);
+
                 result = GetData<T>(
-                    textReaderGetter: () => new StreamReader(path),
+                    textReaderGetter: textReaderGetter,
                     fileNamespaceUri: fileNamespaceUri,
                     classNamespaceUri: classNamespaceUri);
             }
