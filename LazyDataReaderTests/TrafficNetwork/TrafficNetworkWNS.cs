@@ -159,7 +159,7 @@
     }
 
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlRootAttribute("validity", Namespace = "http://test.de/", IsNullable = false)]
+    //[System.Xml.Serialization.XmlRootAttribute("validity", Namespace = "http://test.de/", IsNullable = false)]
     public partial class Validity
     {
         #region Private Fields
@@ -179,7 +179,7 @@
         #region Public Properties
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Namespace = "http://test.de/")]
         public System.DateTime fromDate
         {
             get
@@ -207,7 +207,7 @@
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Namespace = "http://test.de/")]
         public System.DateTime toDate
         {
             get

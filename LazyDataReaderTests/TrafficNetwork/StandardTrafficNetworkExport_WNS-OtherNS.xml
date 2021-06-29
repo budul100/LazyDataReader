@@ -1,5 +1,5 @@
-<?xml version="1.0" ?>
-<trafficNetwork>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trafficNetwork xmlns="http://abc.de/" xmlns:test="http://test.de/">
   <networkPointAreas>
     <networkPointArea>
       <networkPointAreaKey>
@@ -8,10 +8,10 @@
         <type>StopArea</type>
       </networkPointAreaKey>
       <description>ATHERSTONE</description>
-      <validity>
-        <fromDate>2019-12-15</fromDate>
-        <toDate>2019-12-15</toDate>
-      </validity>
+      <test:validity>
+        <test:fromDate>2019-12-15</test:fromDate>
+        <test:toDate>2019-12-15</test:toDate>
+      </test:validity>
     </networkPointArea>
   </networkPointAreas>
 </trafficNetwork>

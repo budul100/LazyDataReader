@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <trafficNetwork xmlns="http://intf.mb.ivu.de/" xmlns:test="http://test.de/">
-	<networkPointAreas>
-		<networkPointArea>
-			<networkPointAreaKey>
-				<abbreviation>ÄTHRSTN</abbreviation>
-				<externalNumber>69009</externalNumber>
-				<type>StopArea</type>
-			</networkPointAreaKey>
-			<description>ATHERSTONE</description>
-			<test:validity>
-				<fromDate>2019-12-15</fromDate>
-				<toDate>2019-12-15</toDate>
-			</test:validity>
-		</networkPointArea>
-	</networkPointAreas>
+  <networkPointAreas>
+    <networkPointArea>
+      <networkPointAreaKey>
+        <abbreviation>ÄTHRSTN</abbreviation>
+        <externalNumber>69009</externalNumber>
+        <type>StopArea</type>
+      </networkPointAreaKey>
+      <description>ATHERSTONE</description>
+      <test:validity>
+        <test:fromDate>2019-12-15</test:fromDate>
+        <test:toDate>2019-12-15</test:toDate>
+      </test:validity>
+    </networkPointArea>
+  </networkPointAreas>
 </trafficNetwork>

@@ -56,6 +56,17 @@ namespace LazyDataReaderTests
             Assert.NotNull(data);
         }
 
+        [Test]
+        public void TestFileWClassWOtherNS()
+        {
+            var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS-OtherNS.xml",
+                classNamespaceUri: "http://intf.mb.ivu.de/",
+                fileNamespaceUri: "http://abc.de/");
+
+            Assert.NotNull(data);
+        }
+
         #endregion Public Methods
     }
 }
