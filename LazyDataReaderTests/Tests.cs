@@ -17,6 +17,16 @@ namespace LazyDataReaderTests
         }
 
         [Test]
+        public void TestEncoding()
+        {
+            var data = Reader.GetFromFile<NeTEx.Light.PublicationDeliveryStructure>(
+                path: @"..\..\..\NeTEx\NOR_NOR-Line-8317_134_18-317_Korgen-Laiskardalen.xml",
+                classNamespaceUri: "http://www.netex.org.uk/netex");
+
+            Assert.NotNull(data);
+        }
+
+        [Test]
         public void TestFileOClassO()
         {
             var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
