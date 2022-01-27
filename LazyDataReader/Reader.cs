@@ -10,16 +10,7 @@ namespace LazyDataReader
     {
         #region Public Methods
 
-        public static T GetFromFile<T>(string path, string classNamespaceUri = default)
-            where T : class
-        {
-            return GetFromFile<T>(
-                path: path,
-                classNamespaceUri: classNamespaceUri,
-                fileNamespaceUri: default);
-        }
-
-        public static T GetFromFile<T>(string path, string fileNamespaceUri, string classNamespaceUri)
+        public static T GetFromFile<T>(string path, string namespaceUri = default)
             where T : class
         {
             if (!File.Exists(path))
@@ -39,8 +30,7 @@ namespace LazyDataReader
 
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
-                    fileNamespaceUri: fileNamespaceUri,
-                    classNamespaceUri: classNamespaceUri);
+                    namespaceUri: namespaceUri);
             }
             catch (Exception exception)
             {
@@ -52,16 +42,7 @@ namespace LazyDataReader
             return result;
         }
 
-        public static T GetFromText<T>(string text, string classNamespaceUri = default)
-            where T : class
-        {
-            return GetFromText<T>(
-                text: text,
-                classNamespaceUri: classNamespaceUri,
-                fileNamespaceUri: default);
-        }
-
-        public static T GetFromText<T>(string text, string fileNamespaceUri, string classNamespaceUri)
+        public static T GetFromText<T>(string text, string namespaceUri = default)
             where T : class
         {
             var result = default(T);
@@ -70,8 +51,7 @@ namespace LazyDataReader
             {
                 result = GetData<T>(
                     textReaderGetter: () => new StringReader(text),
-                    fileNamespaceUri: fileNamespaceUri,
-                    classNamespaceUri: classNamespaceUri);
+                    namespaceUri: namespaceUri);
             }
             catch (Exception exception)
             {
@@ -87,7 +67,7 @@ namespace LazyDataReader
 
         #region Private Methods
 
-        private static T GetData<T>(Func<TextReader> textReaderGetter, string fileNamespaceUri, string classNamespaceUri)
+        private static T GetData<T>(Func<TextReader> textReaderGetter, string namespaceUri)
             where T : class
         {
             var result = default(T);
@@ -98,8 +78,7 @@ namespace LazyDataReader
             {
                 using (var xmlReader = new NamespaceReplaceReader(
                     reader: textReader,
-                    fileNamespaceUri: fileNamespaceUri,
-                    classNamespaceUri: classNamespaceUri))
+                    namespaceUri: namespaceUri))
                 {
                     result = serializer.Deserialize(xmlReader) as T;
                 }

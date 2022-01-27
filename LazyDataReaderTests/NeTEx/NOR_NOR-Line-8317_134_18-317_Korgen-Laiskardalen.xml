@@ -33,124 +33,124 @@
             <Route version="643" id="NOR:Route:8317_Outbound_266273_134">
               <Name>0-1</Name>
               <ShortName>0-1</ShortName>
-              <LineRef ref="NOR:Line:8317_134" version="643"/>
+              <LineRef ref="NOR:Line:8317_134" version="643" />
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute order="1" version="643" id="NOR:PointOnRoute:4392796">
-                  <RoutePointRef ref="NOR:RoutePoint:18320168_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320168_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="2" version="643" id="NOR:PointOnRoute:4392797">
-                  <RoutePointRef ref="NOR:RoutePoint:18321034_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321034_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="3" version="643" id="NOR:PointOnRoute:4392798">
-                  <RoutePointRef ref="NOR:RoutePoint:18321169_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321169_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="4" version="643" id="NOR:PointOnRoute:4392799">
-                  <RoutePointRef ref="NOR:RoutePoint:18320170_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320170_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="5" version="643" id="NOR:PointOnRoute:4392800">
-                  <RoutePointRef ref="NOR:RoutePoint:18321171_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321171_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="6" version="643" id="NOR:PointOnRoute:4392801">
-                  <RoutePointRef ref="NOR:RoutePoint:18321172_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321172_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="7" version="643" id="NOR:PointOnRoute:4392802">
-                  <RoutePointRef ref="NOR:RoutePoint:18321173_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321173_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="8" version="643" id="NOR:PointOnRoute:4392803">
-                  <RoutePointRef ref="NOR:RoutePoint:18321174_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321174_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="9" version="643" id="NOR:PointOnRoute:4392804">
-                  <RoutePointRef ref="NOR:RoutePoint:18320186_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320186_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="10" version="643" id="NOR:PointOnRoute:4392805">
-                  <RoutePointRef ref="NOR:RoutePoint:18321175_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321175_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="11" version="643" id="NOR:PointOnRoute:4392806">
-                  <RoutePointRef ref="NOR:RoutePoint:18321176_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321176_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="12" version="643" id="NOR:PointOnRoute:4392807">
-                  <RoutePointRef ref="NOR:RoutePoint:18321177_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321177_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="13" version="643" id="NOR:PointOnRoute:4392808">
-                  <RoutePointRef ref="NOR:RoutePoint:18321178_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321178_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="14" version="643" id="NOR:PointOnRoute:4392809">
-                  <RoutePointRef ref="NOR:RoutePoint:18321179_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321179_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="15" version="643" id="NOR:PointOnRoute:4392810">
-                  <RoutePointRef ref="NOR:RoutePoint:18321180_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321180_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="16" version="643" id="NOR:PointOnRoute:4392811">
-                  <RoutePointRef ref="NOR:RoutePoint:18321181_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321181_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="17" version="643" id="NOR:PointOnRoute:4392812">
-                  <RoutePointRef ref="NOR:RoutePoint:18321182_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321182_8317_0_134" />
                 </PointOnRoute>
                 <PointOnRoute order="18" version="643" id="NOR:PointOnRoute:4392813">
-                  <RoutePointRef ref="NOR:RoutePoint:18320183_8317_0_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320183_8317_0_134" />
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
             <Route version="643" id="NOR:Route:8317_Inbound_266274_134">
               <Name>1-1</Name>
               <ShortName>1-1</ShortName>
-              <LineRef ref="NOR:Line:8317_134" version="643"/>
+              <LineRef ref="NOR:Line:8317_134" version="643" />
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute order="1" version="643" id="NOR:PointOnRoute:4392814">
-                  <RoutePointRef ref="NOR:RoutePoint:18320183_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320183_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="2" version="643" id="NOR:PointOnRoute:4392815">
-                  <RoutePointRef ref="NOR:RoutePoint:18320182_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320182_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="3" version="643" id="NOR:PointOnRoute:4392816">
-                  <RoutePointRef ref="NOR:RoutePoint:18320181_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320181_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="4" version="643" id="NOR:PointOnRoute:4392817">
-                  <RoutePointRef ref="NOR:RoutePoint:18320180_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320180_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="5" version="643" id="NOR:PointOnRoute:4392818">
-                  <RoutePointRef ref="NOR:RoutePoint:18320179_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320179_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="6" version="643" id="NOR:PointOnRoute:4392819">
-                  <RoutePointRef ref="NOR:RoutePoint:18320178_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320178_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="7" version="643" id="NOR:PointOnRoute:4392820">
-                  <RoutePointRef ref="NOR:RoutePoint:18320177_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320177_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="8" version="643" id="NOR:PointOnRoute:4392821">
-                  <RoutePointRef ref="NOR:RoutePoint:18320176_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320176_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="9" version="643" id="NOR:PointOnRoute:4392822">
-                  <RoutePointRef ref="NOR:RoutePoint:18320175_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320175_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="10" version="643" id="NOR:PointOnRoute:4392823">
-                  <RoutePointRef ref="NOR:RoutePoint:18321186_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18321186_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="11" version="643" id="NOR:PointOnRoute:4392824">
-                  <RoutePointRef ref="NOR:RoutePoint:18320174_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320174_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="12" version="643" id="NOR:PointOnRoute:4392825">
-                  <RoutePointRef ref="NOR:RoutePoint:18320173_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320173_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="13" version="643" id="NOR:PointOnRoute:4392826">
-                  <RoutePointRef ref="NOR:RoutePoint:18320172_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320172_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="14" version="643" id="NOR:PointOnRoute:4392827">
-                  <RoutePointRef ref="NOR:RoutePoint:18320171_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320171_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="15" version="643" id="NOR:PointOnRoute:4392828">
-                  <RoutePointRef ref="NOR:RoutePoint:18320170_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320170_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="16" version="643" id="NOR:PointOnRoute:4392829">
-                  <RoutePointRef ref="NOR:RoutePoint:18320169_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320169_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="17" version="643" id="NOR:PointOnRoute:4392830">
-                  <RoutePointRef ref="NOR:RoutePoint:18320034_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320034_8317_1_134" />
                 </PointOnRoute>
                 <PointOnRoute order="18" version="643" id="NOR:PointOnRoute:4392831">
-                  <RoutePointRef ref="NOR:RoutePoint:18320168_8317_1_134"/>
+                  <RoutePointRef ref="NOR:RoutePoint:18320168_8317_1_134" />
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -163,133 +163,133 @@
                 <BusSubmode>localBus</BusSubmode>
               </TransportSubmode>
               <PublicCode>18-317</PublicCode>
-              <OperatorRef ref="NOR:Operator:283_134"/>
-              <RepresentedByGroupRef ref="NOR:GroupOfLines:bus_134"/>
+              <OperatorRef ref="NOR:Operator:283_134" />
+              <RepresentedByGroupRef ref="NOR:GroupOfLines:bus_134" />
             </Line>
           </lines>
           <journeyPatterns>
             <JourneyPattern version="643" id="NOR:JourneyPattern:8317_Outbound_266273_134">
               <Name>0-1</Name>
-              <RouteRef ref="NOR:Route:8317_Outbound_266273_134" version="643"/>
+              <RouteRef ref="NOR:Route:8317_Outbound_266273_134" version="643" />
               <pointsInSequence>
                 <StopPointInJourneyPattern order="1" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_1_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320168_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320168_8317_0_134" />
                   <ForAlighting>false</ForAlighting>
-                  <DestinationDisplayRef ref="NOR:DestinationDisplay:215_134"/>
+                  <DestinationDisplayRef ref="NOR:DestinationDisplay:215_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="2" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_2_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321034_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321034_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="3" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_3_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321169_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321169_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="4" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_4_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320170_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320170_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="5" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_5_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321171_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321171_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="6" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_6_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321172_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321172_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="7" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_7_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321173_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321173_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="8" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_8_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321174_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321174_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="9" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_9_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320186_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320186_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="10" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_10_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321175_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321175_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="11" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_11_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321176_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321176_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="12" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_12_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321177_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321177_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="13" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_13_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321178_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321178_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="14" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_14_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321179_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321179_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="15" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_15_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321180_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321180_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="16" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_16_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321181_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321181_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="17" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_17_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321182_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321182_8317_0_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="18" version="643" id="NOR:StopPointInJourneyPattern:8317_Outbound_266273_18_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320183_8317_0_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320183_8317_0_134" />
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </JourneyPattern>
             <JourneyPattern version="643" id="NOR:JourneyPattern:8317_Inbound_266274_134">
               <Name>1-1</Name>
-              <RouteRef ref="NOR:Route:8317_Inbound_266274_134" version="643"/>
+              <RouteRef ref="NOR:Route:8317_Inbound_266274_134" version="643" />
               <pointsInSequence>
                 <StopPointInJourneyPattern order="1" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_1_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320183_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320183_8317_1_134" />
                   <ForAlighting>false</ForAlighting>
-                  <DestinationDisplayRef ref="NOR:DestinationDisplay:214_134"/>
+                  <DestinationDisplayRef ref="NOR:DestinationDisplay:214_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="2" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_2_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320182_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320182_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="3" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_3_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320181_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320181_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="4" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_4_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320180_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320180_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="5" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_5_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320179_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320179_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="6" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_6_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320178_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320178_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="7" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_7_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320177_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320177_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="8" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_8_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320176_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320176_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="9" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_9_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320175_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320175_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="10" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_10_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321186_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18321186_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="11" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_11_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320174_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320174_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="12" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_12_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320173_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320173_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="13" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_13_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320172_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320172_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="14" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_14_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320171_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320171_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="15" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_15_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320170_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320170_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="16" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_16_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320169_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320169_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="17" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_17_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320034_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320034_8317_1_134" />
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="18" version="643" id="NOR:StopPointInJourneyPattern:8317_Inbound_266274_18_134">
-                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320168_8317_1_134"/>
+                  <ScheduledStopPointRef ref="NOR:ScheduledStopPoint:18320168_8317_1_134" />
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
@@ -301,82 +301,82 @@
             <ServiceJourney version="643" publication="public" id="NOR:ServiceJourney:8317_634197_1001_134">
               <Name>Tverrå</Name>
               <dayTypes>
-                <DayTypeRef ref="NOR:DayType:34_4_240_134"/>
+                <DayTypeRef ref="NOR:DayType:34_4_240_134" />
               </dayTypes>
-              <JourneyPatternRef ref="NOR:JourneyPattern:8317_Outbound_266273_134" version="643"/>
-              <OperatorRef ref="NOR:Operator:283_134"/>
-              <LineRef ref="NOR:Line:8317_134" version="643"/>
+              <JourneyPatternRef ref="NOR:JourneyPattern:8317_Outbound_266273_134" version="643" />
+              <OperatorRef ref="NOR:Operator:283_134" />
+              <LineRef ref="NOR:Line:8317_134" version="643" />
               <passingTimes>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:f594e41e-fb30-454c-b200-a12e63abb2d3">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_1_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_1_134" version="643" />
                   <DepartureTime>14:10:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:2b8346a5-d9fd-40e8-8bca-1a99113a5a8f">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_2_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_2_134" version="643" />
                   <DepartureTime>14:11:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:e80d4633-5ef6-4a18-a230-92e37e2dc13b">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_3_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_3_134" version="643" />
                   <DepartureTime>14:12:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:c8befae6-131b-4433-92a3-c23878017c90">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_4_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_4_134" version="643" />
                   <DepartureTime>14:15:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:af538e2b-4553-4964-b504-849e555e40c6">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_5_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_5_134" version="643" />
                   <DepartureTime>14:16:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:295ff8b0-8589-4d98-9d81-3d7259f16cb5">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_6_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_6_134" version="643" />
                   <DepartureTime>14:18:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:ef1a5aac-c31e-4804-8893-2c6d76eb7462">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_7_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_7_134" version="643" />
                   <DepartureTime>14:20:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:c70bd0b9-5f4f-452d-9302-16dfd9537b18">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_8_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_8_134" version="643" />
                   <DepartureTime>14:21:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:66baa8fa-4e67-4bbf-8cc8-b3a798693568">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_9_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_9_134" version="643" />
                   <DepartureTime>14:23:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:51cc1d83-8568-43cf-a928-1fb8e6053d80">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_10_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_10_134" version="643" />
                   <DepartureTime>14:23:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:4acb68ac-3f18-496f-a25a-550885282ced">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_11_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_11_134" version="643" />
                   <DepartureTime>14:26:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:8b94e062-855b-4562-b41d-ee38905afbeb">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_12_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_12_134" version="643" />
                   <DepartureTime>14:28:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:fa594d37-0496-4474-8313-4a98c4e5a4df">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_13_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_13_134" version="643" />
                   <DepartureTime>14:29:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:a82cf38f-9777-46cc-a878-dda31709ad28">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_14_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_14_134" version="643" />
                   <DepartureTime>14:32:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:728e4461-3525-439f-a656-0eef46a5bbcd">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_15_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_15_134" version="643" />
                   <DepartureTime>14:35:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:0edef4dc-53d1-4322-a019-6b6998377e16">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_16_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_16_134" version="643" />
                   <DepartureTime>14:36:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:a9641ef9-68f4-4e9f-9c14-965418b91158">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_17_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_17_134" version="643" />
                   <DepartureTime>14:38:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:c0c3d769-68fa-4044-8c1c-d79b69a82675">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_18_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Outbound_266273_18_134" version="643" />
                   <ArrivalTime>14:39:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
@@ -384,82 +384,82 @@
             <ServiceJourney version="643" publication="public" id="NOR:ServiceJourney:8317_634198_2001_134">
               <Name>Korgen</Name>
               <dayTypes>
-                <DayTypeRef ref="NOR:DayType:34_4_240_134"/>
+                <DayTypeRef ref="NOR:DayType:34_4_240_134" />
               </dayTypes>
-              <JourneyPatternRef ref="NOR:JourneyPattern:8317_Inbound_266274_134" version="643"/>
-              <OperatorRef ref="NOR:Operator:283_134"/>
-              <LineRef ref="NOR:Line:8317_134" version="643"/>
+              <JourneyPatternRef ref="NOR:JourneyPattern:8317_Inbound_266274_134" version="643" />
+              <OperatorRef ref="NOR:Operator:283_134" />
+              <LineRef ref="NOR:Line:8317_134" version="643" />
               <passingTimes>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:2b25035b-5da0-477d-a9e9-cb1351b45aff">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_1_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_1_134" version="643" />
                   <DepartureTime>07:50:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:e7d59dad-0bb8-4ea2-bebb-5e04cdeb2977">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_2_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_2_134" version="643" />
                   <DepartureTime>07:50:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:71f06ff6-85e8-4bbb-827f-2558b54004ff">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_3_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_3_134" version="643" />
                   <DepartureTime>07:52:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:8f317169-3c61-4a73-bff6-1292a188a55e">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_4_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_4_134" version="643" />
                   <DepartureTime>07:54:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:0e982d5d-784d-4e67-abec-e2739c80a065">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_5_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_5_134" version="643" />
                   <DepartureTime>07:57:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:2b312630-8aec-4bde-9e0e-29c780c1cde7">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_6_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_6_134" version="643" />
                   <DepartureTime>08:01:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:813fad6c-5958-40ed-947e-d4f08c5bf4d7">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_7_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_7_134" version="643" />
                   <DepartureTime>08:02:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:bdaf9192-ce4d-43f3-afad-3a1140ffe35b">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_8_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_8_134" version="643" />
                   <DepartureTime>08:04:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:9547b578-0592-4feb-84e8-9692d98be3fc">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_9_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_9_134" version="643" />
                   <DepartureTime>08:07:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:fac08c81-a2ca-4527-be22-fcb328c5602b">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_10_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_10_134" version="643" />
                   <DepartureTime>08:08:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:65a0377b-cf3b-4fed-9d15-43d86e0f322f">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_11_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_11_134" version="643" />
                   <DepartureTime>08:10:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:5b7163d8-845e-46c9-9d0a-ab5e22663b1e">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_12_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_12_134" version="643" />
                   <DepartureTime>08:11:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:4bd5c47d-df61-41bd-84b2-dd35e225e2d3">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_13_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_13_134" version="643" />
                   <DepartureTime>08:13:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:5955a00c-cd74-4ea2-9de6-879491d79cca">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_14_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_14_134" version="643" />
                   <DepartureTime>08:15:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:d1fa7834-8c98-4189-be3b-ae4c3dba2343">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_15_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_15_134" version="643" />
                   <DepartureTime>08:17:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:dc91b0e2-7c3e-42cf-8895-410e36211f2f">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_16_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_16_134" version="643" />
                   <DepartureTime>08:21:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:db76d21d-8a7d-42d3-b0a0-a8d784321911">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_17_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_17_134" version="643" />
                   <DepartureTime>08:21:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime version="0" id="NOR:TimetabledPassingTime:a5cf1fae-b6d6-4c32-8813-51d337e8b53b">
-                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_18_134" version="643"/>
+                  <StopPointInJourneyPatternRef ref="NOR:StopPointInJourneyPattern:8317_Inbound_266274_18_134" version="643" />
                   <ArrivalTime>08:24:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>

@@ -1,7 +1,7 @@
 ﻿namespace TrafficNetworkWNS
 {
     [System.SerializableAttribute()]
-    // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class NetworkPointArea
     {
         #region Private Fields
@@ -58,7 +58,7 @@
     }
 
     [System.SerializableAttribute()]
-    // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class NetworkPointAreaKey
     {
         #region Private Fields
@@ -159,7 +159,6 @@
     }
 
     [System.SerializableAttribute()]
-    //[System.Xml.Serialization.XmlRootAttribute("validity", Namespace = "http://test.de/", IsNullable = false)]
     public partial class Validity
     {
         #region Private Fields

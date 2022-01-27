@@ -1,5 +1,5 @@
 using LazyDataReader;
-using NUnit.Framework;
+using Xunit;
 
 namespace LazyDataReaderTests
 {
@@ -7,74 +7,83 @@ namespace LazyDataReaderTests
     {
         #region Public Methods
 
-        [Test]
+        [Fact]
         public void IgnoreNamespace()
         {
-            var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
+            var data1 = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml");
 
-            Assert.NotNull(data);
+            Assert.True(data1.networkPointAreas.Length > 0);
+
+            var data2 = Reader.GetFromFile<RailML2.RailML>(
+                path: @"..\..\..\railML\Example_Import.xml",
+                namespaceUri: "http://www.railml.org/schemas/2013");
+
+            Assert.True(data2.Infrastructure.OperationControlPoints.Length > 0);
+
+            var data3 = Reader.GetFromFile<RailML2.RailML>(
+                path: @"..\..\..\railML\Example_Tracks.xml",
+                namespaceUri: "http://www.railml.org/schemas/2013");
+
+            Assert.True(data3.Infrastructure.OperationControlPoints.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestEncoding()
         {
             var data = Reader.GetFromFile<NeTEx.Light.PublicationDeliveryStructure>(
                 path: @"..\..\..\NeTEx\NOR_NOR-Line-8317_134_18-317_Korgen-Laiskardalen.xml",
-                classNamespaceUri: "http://www.netex.org.uk/netex");
+                namespaceUri: "http://www.netex.org.uk/netex");
 
-            Assert.NotNull(data);
+            Assert.True(data.DataObjects.CompositeFrame.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestFileOClassO()
         {
             var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS.xml");
 
-            Assert.NotNull(data);
+            Assert.True(data.networkPointAreas.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestFileOClassW()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS.xml",
-                classNamespaceUri: "http://intf.mb.ivu.de/");
+                namespaceUri: "http://intf.mb.ivu.de/");
 
-            Assert.NotNull(data);
+            Assert.True(data.networkPointAreas.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestFileWClassO()
         {
             var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
-                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml",
-                classNamespaceUri: "",
-                fileNamespaceUri: "http://intf.mb.ivu.de/");
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml");
 
-            Assert.NotNull(data);
+            Assert.True(data.networkPointAreas.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestFileWClassW()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml",
-                classNamespaceUri: "http://intf.mb.ivu.de/");
+                namespaceUri: "http://intf.mb.ivu.de/");
 
-            Assert.NotNull(data);
+            Assert.True(data.networkPointAreas.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestFileWClassWOtherNS()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS-OtherNS.xml",
-                classNamespaceUri: "http://intf.mb.ivu.de/",
-                fileNamespaceUri: "http://abc.de/");
+                namespaceUri: "http://intf.mb.ivu.de/");
 
-            Assert.NotNull(data);
+            Assert.True(data.networkPointAreas.Length > 0);
         }
 
         #endregion Public Methods

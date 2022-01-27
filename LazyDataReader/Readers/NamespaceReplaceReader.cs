@@ -8,18 +8,16 @@ namespace LazyDataReader.Readers
     {
         #region Private Fields
 
-        private readonly string classNamespaceUri;
-        private readonly string fileNamespaceUri;
+        private readonly string namespaceUri;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public NamespaceReplaceReader(TextReader reader, string fileNamespaceUri, string classNamespaceUri)
+        public NamespaceReplaceReader(TextReader reader, string namespaceUri)
             : base(reader)
         {
-            this.classNamespaceUri = classNamespaceUri;
-            this.fileNamespaceUri = fileNamespaceUri;
+            this.namespaceUri = namespaceUri;
         }
 
         #endregion Public Constructors
@@ -34,20 +32,9 @@ namespace LazyDataReader.Readers
 
         private string GetNamespaceUri()
         {
-            if (NodeType != XmlNodeType.Attribute
-                && string.IsNullOrWhiteSpace(classNamespaceUri))
-            {
-                return string.Empty;
-            }
-            if (NodeType != XmlNodeType.Attribute
-                && base.NamespaceURI == (fileNamespaceUri ?? string.Empty))
-            {
-                return classNamespaceUri ?? string.Empty;
-            }
-            else
-            {
-                return base.NamespaceURI;
-            }
+            return !string.IsNullOrWhiteSpace(namespaceUri)
+                ? namespaceUri
+                : string.Empty;
         }
 
         #endregion Private Methods

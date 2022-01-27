@@ -4,7 +4,6 @@
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class NetworkPointArea
     {
         #region Private Fields
@@ -63,7 +62,6 @@
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class NetworkPointAreaKey
     {
         #region Private Fields
@@ -170,7 +168,6 @@
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://intf.mb.ivu.de/")]
     public partial class Validity
     {
         #region Private Fields
