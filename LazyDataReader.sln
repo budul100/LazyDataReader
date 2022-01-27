@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyDataReader", "LazyDataReader\LazyDataReader.csproj", "{AD744182-8240-4A58-AD5D-CFBC2E417A98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyDataReaderTests", "LazyDataReaderTests\LazyDataReaderTests.csproj", "{97A900A1-3B16-4B21-91EB-ED0F6262C2B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyDataReaderTests", "LazyDataReaderTests\LazyDataReaderTests.csproj", "{9DAE051C-87DB-496D-AB23-6AB9AF749310}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{AD744182-8240-4A58-AD5D-CFBC2E417A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD744182-8240-4A58-AD5D-CFBC2E417A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD744182-8240-4A58-AD5D-CFBC2E417A98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97A900A1-3B16-4B21-91EB-ED0F6262C2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97A900A1-3B16-4B21-91EB-ED0F6262C2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97A900A1-3B16-4B21-91EB-ED0F6262C2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97A900A1-3B16-4B21-91EB-ED0F6262C2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DAE051C-87DB-496D-AB23-6AB9AF749310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DAE051C-87DB-496D-AB23-6AB9AF749310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DAE051C-87DB-496D-AB23-6AB9AF749310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DAE051C-87DB-496D-AB23-6AB9AF749310}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

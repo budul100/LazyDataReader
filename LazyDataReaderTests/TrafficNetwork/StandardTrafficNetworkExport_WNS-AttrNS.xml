@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trafficNetwork xmlns:abc="http://abc.de/" xmlns:test="http://test.de/">
+  <networkPointAreas>
+    <networkPointArea>
+      <networkPointAreaKey abc:abbreviation1="ÄTHRSTN" abc:externalNumber1="69009" test:type1="StopArea" />
+      <description>ATHERSTONE</description>
+      <test:validity>
+        <test:fromDate>2019-12-15</test:fromDate>
+        <test:toDate>2019-12-15</test:toDate>
+      </test:validity>
+    </networkPointArea>
+  </networkPointAreas>
+</trafficNetwork>

@@ -1,5 +1,5 @@
 using LazyDataReader;
-using Xunit;
+using NUnit.Framework;
 
 namespace LazyDataReaderTests
 {
@@ -7,7 +7,7 @@ namespace LazyDataReaderTests
     {
         #region Public Methods
 
-        [Fact]
+        [Test]
         public void IgnoreNamespace()
         {
             var data1 = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
@@ -17,73 +17,97 @@ namespace LazyDataReaderTests
 
             var data2 = Reader.GetFromFile<RailML2.RailML>(
                 path: @"..\..\..\railML\Example_Import.xml",
-                namespaceUri: "http://www.railml.org/schemas/2013");
+                classNamespace: "http://www.railml.org/schemas/2013");
 
-            Assert.True(data2.Infrastructure.OperationControlPoints.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data2.Rollingstock.Vehicles[0].Id));
 
             var data3 = Reader.GetFromFile<RailML2.RailML>(
                 path: @"..\..\..\railML\Example_Tracks.xml",
-                namespaceUri: "http://www.railml.org/schemas/2013");
+                classNamespace: "http://www.railml.org/schemas/2013");
 
-            Assert.True(data3.Infrastructure.OperationControlPoints.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data3.Infrastructure.OperationControlPoints[0].Code));
         }
 
-        [Fact]
+        [Test]
+        public void TestClassOAttrNS()
+        {
+            var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS-Attr.xml",
+                classNamespace: "http://intf.mb.ivu.de/");
+
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber1));
+        }
+
+        [Test]
         public void TestEncoding()
         {
             var data = Reader.GetFromFile<NeTEx.Light.PublicationDeliveryStructure>(
                 path: @"..\..\..\NeTEx\NOR_NOR-Line-8317_134_18-317_Korgen-Laiskardalen.xml",
-                namespaceUri: "http://www.netex.org.uk/netex");
+                classNamespace: "http://www.netex.org.uk/netex");
 
             Assert.True(data.DataObjects.CompositeFrame.Length > 0);
         }
 
-        [Fact]
+        [Test]
         public void TestFileOClassO()
         {
             var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS.xml");
 
-            Assert.True(data.networkPointAreas.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
         }
 
-        [Fact]
+        [Test]
         public void TestFileOClassW()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS.xml",
-                namespaceUri: "http://intf.mb.ivu.de/");
+                classNamespace: "http://intf.mb.ivu.de/");
 
-            Assert.True(data.networkPointAreas.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
         }
 
-        [Fact]
+        [Test]
         public void TestFileWClassO()
         {
             var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml");
 
-            Assert.True(data.networkPointAreas.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
         }
 
-        [Fact]
+        [Test]
         public void TestFileWClassW()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS.xml",
-                namespaceUri: "http://intf.mb.ivu.de/");
+                classNamespace: "http://intf.mb.ivu.de/");
 
-            Assert.True(data.networkPointAreas.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
         }
 
-        [Fact]
+        [Test]
+        public void TestFileWClassWAttrNS()
+        {
+            var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS-AttrNS.xml",
+                classNamespace: "http://intf.mb.ivu.de/",
+                acceptedNamespaces: "http://test.de/");
+
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber1));
+            Assert.True(data.networkPointAreas[0].validity.fromDate.Year == 2019);
+        }
+
+        [Test]
         public void TestFileWClassWOtherNS()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS-OtherNS.xml",
-                namespaceUri: "http://intf.mb.ivu.de/");
+                classNamespace: "http://intf.mb.ivu.de/",
+                acceptedNamespaces: new string[] { "http://test.de/" });
 
-            Assert.True(data.networkPointAreas.Length > 0);
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
+            Assert.True(data.networkPointAreas[0].validity.fromDate.Year == 2019);
         }
 
         #endregion Public Methods

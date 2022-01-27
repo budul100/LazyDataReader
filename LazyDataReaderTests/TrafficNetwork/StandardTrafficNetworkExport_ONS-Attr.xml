@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<trafficNetwork>
+  <networkPointAreas>
+    <networkPointArea>
+      <networkPointAreaKey abbreviation1="ÄTHRSTN" externalNumber1="69009" type1="StopArea" />
+      <description>ATHERSTONE</description>
+      <validity>
+        <fromDate>2019-12-15</fromDate>
+        <toDate>2019-12-15</toDate>
+      </validity>
+    </networkPointArea>
+  </networkPointAreas>
+</trafficNetwork>

@@ -1,6 +1,7 @@
 ﻿using LazyDataReader.Extensions;
 using LazyDataReader.Readers;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -10,7 +11,74 @@ namespace LazyDataReader
     {
         #region Public Methods
 
-        public static T GetFromFile<T>(string path, string namespaceUri = default)
+        public static T GetFromFile<T>(string path, string classNamespace = default,
+            IEnumerable<string> acceptedNamespaces = default)
+            where T : class
+        {
+            return GetDataFromFile<T>(
+                path: path,
+                classNamespace: classNamespace,
+                acceptedNamespaces: acceptedNamespaces);
+        }
+
+        public static T GetFromFile<T>(string path, string classNamespace = default,
+            params string[] acceptedNamespaces)
+            where T : class
+        {
+            return GetDataFromFile<T>(
+                path: path,
+                classNamespace: classNamespace,
+                acceptedNamespaces: acceptedNamespaces);
+        }
+
+        public static T GetFromText<T>(string text, string classNamespace = default,
+            IEnumerable<string> acceptedNamespaces = default)
+            where T : class
+        {
+            return GetDataFromText<T>(
+                text: text,
+                classNamespace: classNamespace,
+                acceptedNamespaces: acceptedNamespaces);
+        }
+
+        public static T GetFromText<T>(string text, string classNamespace = default,
+            params string[] acceptedNamespaces)
+            where T : class
+        {
+            return GetDataFromText<T>(
+                text: text,
+                classNamespace: classNamespace,
+                acceptedNamespaces: acceptedNamespaces);
+        }
+
+        #endregion Public Methods
+
+        #region Private Methods
+
+        private static T GetData<T>(Func<TextReader> textReaderGetter, string classNamespace,
+            IEnumerable<string> acceptedNamespaces)
+            where T : class
+        {
+            var result = default(T);
+
+            var serializer = new XmlSerializer(typeof(T));
+
+            using (var textReader = textReaderGetter.Invoke())
+            {
+                using (var xmlReader = new NamespaceReplaceReader(
+                    reader: textReader,
+                    classNamespace: classNamespace,
+                    acceptedNamespaces: acceptedNamespaces))
+                {
+                    result = serializer.Deserialize(xmlReader) as T;
+                }
+            }
+
+            return result;
+        }
+
+        private static T GetDataFromFile<T>(string path, string classNamespace = default,
+            IEnumerable<string> acceptedNamespaces = default)
             where T : class
         {
             if (!File.Exists(path))
@@ -30,7 +98,8 @@ namespace LazyDataReader
 
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
-                    namespaceUri: namespaceUri);
+                    classNamespace: classNamespace,
+                    acceptedNamespaces: acceptedNamespaces);
             }
             catch (Exception exception)
             {
@@ -42,7 +111,8 @@ namespace LazyDataReader
             return result;
         }
 
-        public static T GetFromText<T>(string text, string namespaceUri = default)
+        private static T GetDataFromText<T>(string text, string classNamespace = default,
+            IEnumerable<string> acceptedNamespaces = default)
             where T : class
         {
             var result = default(T);
@@ -51,37 +121,14 @@ namespace LazyDataReader
             {
                 result = GetData<T>(
                     textReaderGetter: () => new StringReader(text),
-                    namespaceUri: namespaceUri);
+                    classNamespace: classNamespace,
+                    acceptedNamespaces: acceptedNamespaces);
             }
             catch (Exception exception)
             {
                 throw new ApplicationException(
                     message: $"The text '{text}' cannot be red.",
                     innerException: exception);
-            }
-
-            return result;
-        }
-
-        #endregion Public Methods
-
-        #region Private Methods
-
-        private static T GetData<T>(Func<TextReader> textReaderGetter, string namespaceUri)
-            where T : class
-        {
-            var result = default(T);
-
-            var serializer = new XmlSerializer(typeof(T));
-
-            using (var textReader = textReaderGetter.Invoke())
-            {
-                using (var xmlReader = new NamespaceReplaceReader(
-                    reader: textReader,
-                    namespaceUri: namespaceUri))
-                {
-                    result = serializer.Deserialize(xmlReader) as T;
-                }
             }
 
             return result;

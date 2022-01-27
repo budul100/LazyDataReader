@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Xml;
 
 namespace LazyDataReader.Readers
@@ -8,21 +10,25 @@ namespace LazyDataReader.Readers
     {
         #region Private Fields
 
-        private readonly string namespaceUri;
+        private readonly IEnumerable<string> acceptedNamespaces;
+        private readonly string classNamespace;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public NamespaceReplaceReader(TextReader reader, string namespaceUri)
+        public NamespaceReplaceReader(TextReader reader, string classNamespace, IEnumerable<string> acceptedNamespaces)
             : base(reader)
         {
-            this.namespaceUri = namespaceUri;
+            this.classNamespace = classNamespace;
+            this.acceptedNamespaces = acceptedNamespaces;
         }
 
         #endregion Public Constructors
 
         #region Public Properties
+
+        public override string BaseURI => classNamespace;
 
         public override string NamespaceURI => GetNamespaceUri();
 
@@ -32,9 +38,17 @@ namespace LazyDataReader.Readers
 
         private string GetNamespaceUri()
         {
-            return !string.IsNullOrWhiteSpace(namespaceUri)
-                ? namespaceUri
-                : string.Empty;
+            if (acceptedNamespaces?.Contains(base.NamespaceURI) ?? false)
+            {
+                return base.NamespaceURI;
+            }
+            else if (NodeType != XmlNodeType.Attribute
+                && !string.IsNullOrWhiteSpace(classNamespace))
+            {
+                return classNamespace;
+            }
+
+            return string.Empty;
         }
 
         #endregion Private Methods

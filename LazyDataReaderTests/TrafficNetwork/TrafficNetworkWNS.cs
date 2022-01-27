@@ -14,7 +14,6 @@
 
         #region Public Properties
 
-        /// <remarks/>
         public string description
         {
             get
@@ -27,7 +26,6 @@
             }
         }
 
-        /// <remarks/>
         public NetworkPointAreaKey networkPointAreaKey
         {
             get
@@ -40,7 +38,6 @@
             }
         }
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlElement("validity", Namespace = "http://test.de/")]
         public Validity validity
         {
@@ -64,17 +61,16 @@
         #region Private Fields
 
         private string abbreviationField;
-
-        private string divisionAbbreviationField;
+        private string abbreviationField1;
         private string externalNumberField;
-
+        private string externalNumberField1;
         private string typeField;
+        private string typeField1;
 
         #endregion Private Fields
 
         #region Public Properties
 
-        /// <remarks/>
         public string abbreviation
         {
             get
@@ -87,20 +83,19 @@
             }
         }
 
-        /// <remarks/>
-        public string divisionAbbreviation
+        [System.Xml.Serialization.XmlAttribute(Namespace = "http://intf.mb.ivu.de/")]
+        public string abbreviation1
         {
             get
             {
-                return this.divisionAbbreviationField;
+                return this.abbreviationField1;
             }
             set
             {
-                this.divisionAbbreviationField = value;
+                this.abbreviationField1 = value;
             }
         }
 
-        /// <remarks/>
         public string externalNumber
         {
             get
@@ -113,7 +108,19 @@
             }
         }
 
-        /// <remarks/>
+        [System.Xml.Serialization.XmlAttribute(Namespace = "http://intf.mb.ivu.de/")]
+        public string externalNumber1
+        {
+            get
+            {
+                return this.externalNumberField1;
+            }
+            set
+            {
+                this.externalNumberField1 = value;
+            }
+        }
+
         public string type
         {
             get
@@ -123,6 +130,19 @@
             set
             {
                 this.typeField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttribute(Namespace = "http://test.de/")]
+        public string type1
+        {
+            get
+            {
+                return this.typeField1;
+            }
+            set
+            {
+                this.typeField1 = value;
             }
         }
 
@@ -141,7 +161,6 @@
 
         #region Public Properties
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("networkPointArea", IsNullable = false)]
         public NetworkPointArea[] networkPointAreas
         {
@@ -159,6 +178,7 @@
     }
 
     [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://test.de/")]
     public partial class Validity
     {
         #region Private Fields
@@ -177,7 +197,6 @@
 
         #region Public Properties
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Namespace = "http://test.de/")]
         public System.DateTime fromDate
         {
@@ -191,7 +210,6 @@
             }
         }
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool fromDateSpecified
         {
@@ -205,7 +223,6 @@
             }
         }
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Namespace = "http://test.de/")]
         public System.DateTime toDate
         {
@@ -219,7 +236,6 @@
             }
         }
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool toDateSpecified
         {
@@ -233,7 +249,6 @@
             }
         }
 
-        /// <remarks/>
         public string validityName
         {
             get
