@@ -10,18 +10,18 @@ namespace LazyDataReader.Readers
     {
         #region Private Fields
 
-        private readonly IEnumerable<string> acceptedNamespaces;
+        private readonly IEnumerable<string> additionalNamespaces;
         private readonly string classNamespace;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public NamespaceReplaceReader(TextReader reader, string classNamespace, IEnumerable<string> acceptedNamespaces)
+        public NamespaceReplaceReader(TextReader reader, string classNamespace, IEnumerable<string> additionalNamespaces)
             : base(reader)
         {
             this.classNamespace = classNamespace;
-            this.acceptedNamespaces = acceptedNamespaces;
+            this.additionalNamespaces = additionalNamespaces;
         }
 
         #endregion Public Constructors
@@ -38,7 +38,7 @@ namespace LazyDataReader.Readers
 
         private string GetNamespaceUri()
         {
-            if (acceptedNamespaces?.Contains(base.NamespaceURI) ?? false)
+            if (additionalNamespaces?.Contains(base.NamespaceURI) ?? false)
             {
                 return base.NamespaceURI;
             }

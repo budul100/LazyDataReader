@@ -43,7 +43,8 @@ namespace LazyDataReaderTests
         {
             var data = Reader.GetFromFile<NeTEx.Light.PublicationDeliveryStructure>(
                 path: @"..\..\..\NeTEx\NOR_NOR-Line-8317_134_18-317_Korgen-Laiskardalen.xml",
-                classNamespace: "http://www.netex.org.uk/netex");
+                classNamespace: "http://www.netex.org.uk/netex",
+                additionalNamespaces: "http://www.opengis.net/gml/3.2");
 
             Assert.True(data.DataObjects.CompositeFrame.Length > 0);
         }
@@ -92,7 +93,7 @@ namespace LazyDataReaderTests
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS-AttrNS.xml",
                 classNamespace: "http://intf.mb.ivu.de/",
-                acceptedNamespaces: "http://test.de/");
+                additionalNamespaces: "http://test.de/");
 
             Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber1));
             Assert.True(data.networkPointAreas[0].validity.fromDate.Year == 2019);
@@ -104,7 +105,7 @@ namespace LazyDataReaderTests
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(
                 path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_WNS-OtherNS.xml",
                 classNamespace: "http://intf.mb.ivu.de/",
-                acceptedNamespaces: new string[] { "http://test.de/" });
+                additionalNamespaces: new string[] { "http://test.de/" });
 
             Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
             Assert.True(data.networkPointAreas[0].validity.fromDate.Year == 2019);

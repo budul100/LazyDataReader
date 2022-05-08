@@ -12,43 +12,43 @@ namespace LazyDataReader
         #region Public Methods
 
         public static T GetFromFile<T>(string path, string classNamespace = default,
-            IEnumerable<string> acceptedNamespaces = default)
+            IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
                 classNamespace: classNamespace,
-                acceptedNamespaces: acceptedNamespaces);
+                additionalNamespaces: additionalNamespaces);
         }
 
         public static T GetFromFile<T>(string path, string classNamespace = default,
-            params string[] acceptedNamespaces)
+            params string[] additionalNamespaces)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
                 classNamespace: classNamespace,
-                acceptedNamespaces: acceptedNamespaces);
+                additionalNamespaces: additionalNamespaces);
         }
 
         public static T GetFromText<T>(string text, string classNamespace = default,
-            IEnumerable<string> acceptedNamespaces = default)
+            IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromText<T>(
                 text: text,
                 classNamespace: classNamespace,
-                acceptedNamespaces: acceptedNamespaces);
+                additionalNamespaces: additionalNamespaces);
         }
 
         public static T GetFromText<T>(string text, string classNamespace = default,
-            params string[] acceptedNamespaces)
+            params string[] additionalNamespaces)
             where T : class
         {
             return GetDataFromText<T>(
                 text: text,
                 classNamespace: classNamespace,
-                acceptedNamespaces: acceptedNamespaces);
+                additionalNamespaces: additionalNamespaces);
         }
 
         #endregion Public Methods
@@ -56,7 +56,7 @@ namespace LazyDataReader
         #region Private Methods
 
         private static T GetData<T>(Func<TextReader> textReaderGetter, string classNamespace,
-            IEnumerable<string> acceptedNamespaces)
+            IEnumerable<string> additionalNamespaces)
             where T : class
         {
             var result = default(T);
@@ -68,7 +68,7 @@ namespace LazyDataReader
                 using (var xmlReader = new NamespaceReplaceReader(
                     reader: textReader,
                     classNamespace: classNamespace,
-                    acceptedNamespaces: acceptedNamespaces))
+                    additionalNamespaces: additionalNamespaces))
                 {
                     result = serializer.Deserialize(xmlReader) as T;
                 }
@@ -78,7 +78,7 @@ namespace LazyDataReader
         }
 
         private static T GetDataFromFile<T>(string path, string classNamespace = default,
-            IEnumerable<string> acceptedNamespaces = default)
+            IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             if (!File.Exists(path))
@@ -99,7 +99,7 @@ namespace LazyDataReader
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
                     classNamespace: classNamespace,
-                    acceptedNamespaces: acceptedNamespaces);
+                    additionalNamespaces: additionalNamespaces);
             }
             catch (Exception exception)
             {
@@ -112,7 +112,7 @@ namespace LazyDataReader
         }
 
         private static T GetDataFromText<T>(string text, string classNamespace = default,
-            IEnumerable<string> acceptedNamespaces = default)
+            IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             var result = default(T);
@@ -122,7 +122,7 @@ namespace LazyDataReader
                 result = GetData<T>(
                     textReaderGetter: () => new StringReader(text),
                     classNamespace: classNamespace,
-                    acceptedNamespaces: acceptedNamespaces);
+                    additionalNamespaces: additionalNamespaces);
             }
             catch (Exception exception)
             {
