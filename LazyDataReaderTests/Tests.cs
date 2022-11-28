@@ -1,5 +1,6 @@
 using LazyDataReader;
 using NUnit.Framework;
+using System.Linq;
 
 namespace LazyDataReaderTests
 {
@@ -26,6 +27,17 @@ namespace LazyDataReaderTests
                 classNamespace: "http://www.railml.org/schemas/2013");
 
             Assert.False(string.IsNullOrWhiteSpace(data3.Infrastructure.OperationControlPoints[0].Code));
+        }
+
+        [Test]
+        public void ReplaceCommaInNumbers()
+        {
+            var data = Reader.GetFromFile<RINF.RINFData>(
+                path: @"..\..\..\RINF\Example_RINF.xml",
+                replaceCommaInNumbers: true);
+
+            Assert.True(data.OperationalPoint.Length == 2);
+            Assert.True(data.SectionOfLine.Single().SOLLength.Value == (decimal)2.834);
         }
 
         [Test]

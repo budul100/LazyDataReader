@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace LazyDataReader.Readers
 {
-    public class NamespaceReplaceReader
+    internal class NamespaceReplaceReader
         : XmlTextReader
     {
         #region Private Fields

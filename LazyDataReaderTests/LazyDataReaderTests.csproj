@@ -1,28 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="coverlet.collector" Version="3.0.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4"/>
+		<PackageReference Include="NUnit" Version="3.13.1"/>
+		<PackageReference Include="NUnit3TestAdapter" Version="3.17.0"/>
+		<PackageReference Include="coverlet.collector" Version="3.0.2"/>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\LazyDataReader\LazyDataReader.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\LazyDataReader\LazyDataReader.csproj"/>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="NeTEx">
-      <HintPath>..\LazyDataReaderTestsX\NeTEx\NeTEx.dll</HintPath>
-    </Reference>
-    <Reference Include="RailML2">
-      <HintPath>..\LazyDataReaderTestsX\railML\RailML2.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+		<Reference Include="NeTEx">
+			<HintPath>..\LazyDataReaderTests\NeTEx\NeTEx.dll</HintPath>
+		</Reference>
+		<Reference Include="RailML2">
+			<HintPath>..\LazyDataReaderTests\railML\RailML2.dll</HintPath>
+		</Reference>
+		<Reference Include="RINF">
+			<HintPath>..\LazyDataReaderTests\RINF\RINF.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
 </Project>

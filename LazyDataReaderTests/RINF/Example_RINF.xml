@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RINFData>
+	<MemberStateCode Code="HR" Version="363" />
+	<SectionOfLine ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+		<SOLIMCode Value="0078" />
+		<SOLLineIdentification Value="L101" />
+		<SOLOPStart Value="HR94903" />
+		<SOLOPEnd Value="HR74904" />
+		<SOLLength Value="2,834" />
+		<SOLNature Value="10" OptionalValue="Regular SoL" />
+		<SOLTrack ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+			<SOLTrackIdentification Value="L10105J" />
+			<SOLTrackDirection Value="30" OptionalValue="B" />
+			<SOLTrackParameter ID="IPP_TENClass" IsApplicable="Y" Value="40" OptionalValue="Off-TEN" />
+			<SOLTrackParameter ID="IPP_LoadCap" IsApplicable="Y" Value="60 60" OptionalValue="C4 60" />
+			<SOLTrackParameter ID="IPP_TempRange" IsApplicable="Y" Value="10" OptionalValue="T1 (-25 to +40)" />
+			<SOLTrackParameter ID="IPP_SevereClimateCon" IsApplicable="Y" Value="N" OptionalValue="N" />
+			<SOLTrackParameter ID="ITP_NomGauge" IsApplicable="Y" Value="30" OptionalValue="1435" />
+			<SOLTrackParameter ID="ISC_TSISwitchCrossing" IsApplicable="Y" Value="N" OptionalValue="N" />
+			<SOLTrackParameter ID="ILR_EddyCurrentBrakes" IsApplicable="Y" Value="20" OptionalValue="allowed under conditions" />
+			<SOLTrackParameter ID="ILR_MagneticBrakes" IsApplicable="Y" Value="20" OptionalValue="allowed under conditions" />
+			<SOLTrackParameter ID="IHS_LevelCrossing" IsApplicable="Y" Value="Y" OptionalValue="Y" />
+			<SOLTrackParameter ID="IHS_HABDExist" IsApplicable="Y" Value="Y" OptionalValue="Y" />
+			<SOLTrackParameter ID="IHS_TSIHABD" IsApplicable="Y" Value="Y" OptionalValue="Y" />
+			<SOLTrackParameter ID="CPE_Level" IsApplicable="Y" Value="10" OptionalValue="N" />
+			<SOLTrackParameter ID="CCD_TSITrainDetection" IsApplicable="Y" Value="N" OptionalValue="N" />
+			<SOLTrackParameter ID="IPP_MaxSpeed" IsApplicable="Y" Value="60" />
+			<SOLTrackParameter ID="IPP_MaxAltitude" IsApplicable="Y" Value="+200" />
+			<SOLTrackParameter ID="ILL_Gauging" IsApplicable="Y" Value="30" OptionalValue="GC" />
+			<SOLTrackParameter ID="ILL_MinRadHorzCurve" IsApplicable="Y" Value="2005" />
+			<SOLTrackParameter ID="ISC_MinWheelDiaFixObtuseCrossings" IsApplicable="Y" Value="330" />
+			<SOLTrackParameter ID="IHS_AccelerationLevelCrossing" IsApplicable="Y" Value="0.0" />
+			<SOLTrackParameter ID="CBP_MaxBrakeDist" IsApplicable="Y" Value="700" />
+			<SOLTrackParameter ID="ILL_ProfileNumSwapBodies" IsApplicable="N" />
+			<SOLTrackParameter ID="ILL_ProfileNumSemiTrailers" IsApplicable="N" />
+			<SOLTrackParameter ID="CPE_Baseline" IsApplicable="N" />
+			<SOLTrackParameter ID="CLD_ETCSSituation" IsApplicable="N" />
+			<SOLTrackParameter ID="CLD_OtherProtectControlWarn" IsApplicable="N" />
+			<SOLTrackParameter ID="IDE_ECVerification" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IDE_EIDemonstration" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IPP_LineCat" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IPP_FreightCorridor" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IPP_NCLoadCap" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IPP_StructureCheckLoc" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IPP_StructureCheckDocRef" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IPP_HSLMCompliant" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ILL_GaugeCheckLoc" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ILL_GaugeCheckDocRef" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ILL_GradProfile" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ITP_CantDeficiency" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ITP_RailInclination" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ITP_Ballast" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ILR_MaxDeceleration" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ILR_ECBDocRef" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ILR_MBDocRef" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IHS_FlangeLubeForbidden" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IHS_HABDID" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IHS_HABDGen" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IHS_HABDLoc" IsApplicable="NYA" />
+			<SOLTrackParameter ID="IHS_HABDDirection" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EDE_ECVerification" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EDE_EIDemonstration" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_SystemType" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_VoltFreq" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_MaxTrainCurrent" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_MaxStandstillCurrent" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_RegenerativeBraking" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_Umax2" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_MaxWireHeight" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ECS_MinWireHeight" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EPA_TSIHeads" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EPA_OtherHeads" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EPA_NumRaisedSpeed" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EPA_StripMaterial" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EOS_Phase" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EOS_InfoPhase" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EOS_System" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EOS_InfoSystem" IsApplicable="NYA" />
+			<SOLTrackParameter ID="EOS_DistSignToPhaseEnd" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ERS_PowerLimitOnBoard" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ERS_ContactForce" IsApplicable="NYA" />
+			<SOLTrackParameter ID="ERS_AutoDropRequired" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CDE_ECVerification" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_Version" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_NumActiveMob" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_Needof555" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_OptionalFunctions" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_RoamingAgreement" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_RadioCompVoice" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRG_RadioCompData" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CPO_LegacyTrainProtection" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CRS_Installed" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_DetectionSystem" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIMaxDistConsecutiveAxles" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MaxDistConsecutiveAxles" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MinDistConsecutiveAxles" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MinDistFirstLastAxles" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MaxDistEndTrainFirstAxle" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MinRimWidth" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MinWheelDiameter" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MinFlangeThickness" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MinFlangeHeight" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MaxFlangeHeight" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIMetalFree" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIMetalConstruction" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIFerroWheelMat" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIMaxImpedanceWheelset" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MaxImpedanceWheelset" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_MaxSandOutput" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_SandDriverOverride" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSISandCharacteristics" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_FlangeLubeRules" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSICompositeBrakeBlocks" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIShuntDevices" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TSIRSTShuntImpedance" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TCCheck" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TCCheckDocRef" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTD_TCLimitation" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTS_SwitchProtectControlWarn" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CTS_SwitchRadioSystem" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CEI_TSIMagneticFields" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CEI_TSITractionHarmonics" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CPE_SystemCompatibility" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CBP_AddInfoAvailable" IsApplicable="NYA" />
+			<SOLTrackParameter ID="CBP_BrakePerfDocRef" IsApplicable="NYA" />
+		</SOLTrack>
+	</SectionOfLine>
+	<OperationalPoint ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+		<OPName Value="Brodec" />
+		<UniqueOPID Value="HR94903" />
+		<OPTafTapCode IsApplicable="NYA" Value="" />
+		<OPType Value="70" OptionalValue="passenger stop" />
+		<OPGeographicLocation Longitude="+16,4447" Latitude="46,4831" />
+		<OPRailwayLocation Kilometer="13,776" NationalIdentNum="L101" />
+		<OPTrack ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+			<OPTrackIMCode Value="0078" />
+			<OPTrackIdentification Value="1. kolosijek" />
+			<OPTrackParameter ID="IDE_ECVerification" IsApplicable="NYA" />
+			<OPTrackParameter ID="IDE_EIDemonstration" IsApplicable="NYA" />
+			<OPTrackParameter ID="IPP_LineCat" IsApplicable="NYA" />
+			<OPTrackParameter ID="IPP_FreightCorridor" IsApplicable="NYA" />
+			<OPTrackParameter ID="ILL_Gauging" IsApplicable="NYA" />
+			<OPTrackParameter ID="ILL_GaugeCheckLoc" IsApplicable="NYA" />
+			<OPTrackParameter ID="ILL_GaugeCheckDocRef" IsApplicable="NYA" />
+			<OPTrackParameter ID="IPP_TENClass" IsApplicable="Y" Value="40" OptionalValue="Off TEN" />
+			<OPTrackParameter ID="ITP_NomGauge" IsApplicable="Y" Value="30" OptionalValue="1435" />
+		</OPTrack>
+	</OperationalPoint>
+	<OperationalPoint ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+		<OPName Value="Mursko Središće" />
+		<UniqueOPID Value="HR74904" />
+		<OPTafTapCode IsApplicable="NYA" Value="" />
+		<OPType Value="70" OptionalValue="passenger stop" />
+		<OPGeographicLocation Longitude="+16,4464" Latitude="46,5083" />
+		<OPRailwayLocation Kilometer="16,61" NationalIdentNum="L101" />
+		<OPTrack ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+			<OPTrackIMCode Value="0078" />
+			<OPTrackIdentification Value="2. kolosijek" />
+			<OPTrackParameter ID="IDE_ECVerification" IsApplicable="NYA" />
+			<OPTrackParameter ID="IDE_EIDemonstration" IsApplicable="NYA" />
+			<OPTrackParameter ID="IPP_LineCat" IsApplicable="NYA" />
+			<OPTrackParameter ID="IPP_FreightCorridor" IsApplicable="NYA" />
+			<OPTrackParameter ID="ILL_Gauging" IsApplicable="NYA" />
+			<OPTrackParameter ID="ILL_GaugeCheckLoc" IsApplicable="NYA" />
+			<OPTrackParameter ID="ILL_GaugeCheckDocRef" IsApplicable="NYA" />
+			<OPTrackParameter ID="IPP_TENClass" IsApplicable="Y" Value="40" OptionalValue="Off TEN" />
+			<OPTrackParameter ID="ITP_NomGauge" IsApplicable="Y" Value="30" OptionalValue="1435" />
+			<OPTrackPlatform ValidityDateStart="2020-04-30" ValidityDateEnd="2020-05-31">
+				<OPTrackPlatformIMCode Value="0078" />
+				<OPTrackPlatformIdentification Value="1" />
+				<OPTrackPlatformParameter ID="IPL_Length" IsApplicable="Y" Value="58" />
+				<OPTrackPlatformParameter ID="IPL_AreaBoardingAid" IsApplicable="Y" Value="0" />
+				<OPTrackPlatformParameter ID="IPL_TENClass" IsApplicable="Y" Value="40" OptionalValue="Off TEN" />
+				<OPTrackPlatformParameter ID="IPL_Height" IsApplicable="Y" Value="10" OptionalValue="250" />
+				<OPTrackPlatformParameter ID="IPL_AssistanceStartingTrain" IsApplicable="Y" Value="N" OptionalValue="N" />
+			</OPTrackPlatform>
+		</OPTrack>
+	</OperationalPoint>
+</RINFData>
