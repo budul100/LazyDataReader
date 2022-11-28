@@ -11,47 +11,47 @@ namespace LazyDataReader
     {
         #region Public Methods
 
-        public static T GetFromFile<T>(string path, string classNamespace = default,
-            bool replaceCommaInNumbers = false, IEnumerable<string> additionalNamespaces = default)
+        public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false,
+            string classNamespace = default, IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
-                classNamespace: classNamespace,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
-        public static T GetFromFile<T>(string path, string classNamespace = default,
-            bool replaceCommaInNumbers = false, params string[] additionalNamespaces)
+        public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false,
+            string classNamespace = default, params string[] additionalNamespaces)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
-                classNamespace: classNamespace,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
-        public static T GetFromText<T>(string text, string classNamespace = default,
-            bool replaceCommaInNumbers = false, IEnumerable<string> additionalNamespaces = default)
+        public static T GetFromText<T>(string text, bool replaceCommaInNumbers = false,
+            string classNamespace = default, IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromText<T>(
                 text: text,
-                classNamespace: classNamespace,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
-        public static T GetFromText<T>(string text, string classNamespace = default,
-            bool replaceCommaInNumbers = false, params string[] additionalNamespaces)
+        public static T GetFromText<T>(string text, bool replaceCommaInNumbers = false,
+            string classNamespace = default, params string[] additionalNamespaces)
             where T : class
         {
             return GetDataFromText<T>(
                 text: text,
-                classNamespace: classNamespace,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
@@ -59,8 +59,8 @@ namespace LazyDataReader
 
         #region Private Methods
 
-        private static T GetData<T>(Func<TextReader> textReaderGetter, string classNamespace,
-            bool replaceCommaInNumbers, IEnumerable<string> additionalNamespaces)
+        private static T GetData<T>(Func<TextReader> textReaderGetter, bool replaceCommaInNumbers,
+            string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
             var result = default(T);
@@ -85,8 +85,8 @@ namespace LazyDataReader
             return result;
         }
 
-        private static T GetDataFromFile<T>(string path, string classNamespace,
-            bool replaceCommaInNumbers, IEnumerable<string> additionalNamespaces)
+        private static T GetDataFromFile<T>(string path, bool replaceCommaInNumbers,
+            string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
             if (!File.Exists(path))
@@ -106,8 +106,8 @@ namespace LazyDataReader
 
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
-                    classNamespace: classNamespace,
                     replaceCommaInNumbers: replaceCommaInNumbers,
+                    classNamespace: classNamespace,
                     additionalNamespaces: additionalNamespaces);
             }
             catch (Exception exception)
@@ -120,8 +120,8 @@ namespace LazyDataReader
             return result;
         }
 
-        private static T GetDataFromText<T>(string text, string classNamespace,
-            bool replaceCommaInNumbers, IEnumerable<string> additionalNamespaces)
+        private static T GetDataFromText<T>(string text, bool replaceCommaInNumbers,
+            string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
             var result = default(T);
@@ -132,8 +132,8 @@ namespace LazyDataReader
 
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
-                    classNamespace: classNamespace,
                     replaceCommaInNumbers: replaceCommaInNumbers,
+                    classNamespace: classNamespace,
                     additionalNamespaces: additionalNamespaces);
             }
             catch (Exception exception)
