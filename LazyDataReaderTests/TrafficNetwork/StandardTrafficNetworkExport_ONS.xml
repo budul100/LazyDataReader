@@ -1,17 +1,17 @@
 <?xml version="1.0" ?>
 <trafficNetwork>
-  <networkPointAreas>
-    <networkPointArea>
-      <networkPointAreaKey>
-        <abbreviation>ÄTHRSTN</abbreviation>
-        <externalNumber>69009</externalNumber>
-        <type>StopArea</type>
-      </networkPointAreaKey>
-      <description>ATHERSTONE</description>
-      <validity>
-        <fromDate>2019-12-15</fromDate>
-        <toDate>2019-12-15</toDate>
-      </validity>
-    </networkPointArea>
-  </networkPointAreas>
+	<networkPointAreas>
+		<networkPointArea>
+			<networkPointAreaKey>
+				<abbreviation>ÄTHRSTN</abbreviation>
+				<externalNumber>69009</externalNumber>
+				<type>StopArea</type>
+			</networkPointAreaKey>
+			<description>ATHERSTONE</description>
+			<validity>
+				<fromDate>2019-12-15</fromDate>
+				<toDate>2019-12-15</toDate>
+			</validity>
+		</networkPointArea>
+	</networkPointAreas>
 </trafficNetwork>

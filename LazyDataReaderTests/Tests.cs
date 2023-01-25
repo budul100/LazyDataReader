@@ -30,6 +30,16 @@ namespace LazyDataReaderTests
         }
 
         [Test]
+        public void RemoveNamespaces()
+        {
+            var data = Reader.GetFromFile<TrafficNetworkONS.TrafficNetwork>(
+                path: @"..\..\..\TrafficNetwork\StandardTrafficNetworkExport_ONS-Prefix.xml",
+                removeNamespaces: true);
+
+            Assert.False(string.IsNullOrWhiteSpace(data.networkPointAreas[0].networkPointAreaKey.externalNumber));
+        }
+
+        [Test]
         public void ReplaceCommaInNumbers()
         {
             var data = Reader.GetFromFile<RINF.RINFData>(

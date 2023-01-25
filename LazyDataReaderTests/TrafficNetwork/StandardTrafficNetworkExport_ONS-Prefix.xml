@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ns1:trafficNetwork>
+	<ns1:networkPointAreas>
+		<ns1:networkPointArea>
+			<ns1:networkPointAreaKey>
+				<ns1:abbreviation>ÄTHRSTN</ns1:abbreviation>
+				<ns1:externalNumber>69009</ns1:externalNumber>
+				<ns1:type>StopArea</ns1:type>
+			</ns1:networkPointAreaKey>
+			<ns1:description>ATHERSTONE</ns1:description>
+			<ns1:validity>
+				<ns1:fromDate>2019-12-15</ns1:fromDate>
+				<ns1:toDate>2019-12-15</ns1:toDate>
+			</ns1:validity>
+		</ns1:networkPointArea>
+	</ns1:networkPointAreas>
+</ns1:trafficNetwork>

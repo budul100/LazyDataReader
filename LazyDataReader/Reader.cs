@@ -11,40 +11,43 @@ namespace LazyDataReader
     {
         #region Public Methods
 
-        public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false,
+        public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false, bool removeNamespaces = false,
             string classNamespace = default, IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                removeNamespaces: removeNamespaces,
                 classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
-        public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false,
+        public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false, bool removeNamespaces = false,
             string classNamespace = default, params string[] additionalNamespaces)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                removeNamespaces: removeNamespaces,
                 classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
-        public static T GetFromText<T>(string text, bool replaceCommaInNumbers = false,
+        public static T GetFromText<T>(string text, bool replaceCommaInNumbers = false, bool removeNamespaces = false,
             string classNamespace = default, IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromText<T>(
                 text: text,
                 replaceCommaInNumbers: replaceCommaInNumbers,
+                removeNamespaces: removeNamespaces,
                 classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
-        public static T GetFromText<T>(string text, bool replaceCommaInNumbers = false,
+        public static T GetFromText<T>(string text, bool replaceCommaInNumbers = false, bool removeNamespaces = false,
             string classNamespace = default, params string[] additionalNamespaces)
             where T : class
         {
@@ -52,6 +55,7 @@ namespace LazyDataReader
                 text: text,
                 replaceCommaInNumbers: replaceCommaInNumbers,
                 classNamespace: classNamespace,
+                removeNamespaces: removeNamespaces,
                 additionalNamespaces: additionalNamespaces);
         }
 
@@ -59,8 +63,26 @@ namespace LazyDataReader
 
         #region Private Methods
 
-        private static T GetData<T>(Func<TextReader> textReaderGetter, bool replaceCommaInNumbers,
-            string classNamespace, IEnumerable<string> additionalNamespaces)
+        private static TextReader GetAdditionalReaders(this TextReader textReader, bool replaceCommaInNumbers,
+            bool removeNamespaces)
+        {
+            var result = textReader;
+
+            if (replaceCommaInNumbers)
+            {
+                result = new CommaReplaceReader(result);
+            }
+
+            if (removeNamespaces)
+            {
+                result = new NamespaceRemoveReader(result);
+            }
+
+            return result;
+        }
+
+        private static T GetData<T>(this Func<TextReader> textReaderGetter, bool replaceCommaInNumbers,
+            bool removeNamespaces, string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
             var result = default(T);
@@ -69,8 +91,9 @@ namespace LazyDataReader
 
             using (var textReader = textReaderGetter.Invoke())
             {
-                using (var replaceReader = textReader.GetReplaceReader(
-                    replaceCommaInNumbers: replaceCommaInNumbers))
+                using (var replaceReader = textReader.GetAdditionalReaders(
+                    replaceCommaInNumbers: replaceCommaInNumbers,
+                    removeNamespaces: removeNamespaces))
                 {
                     using (var xmlReader = new NamespaceReplaceReader(
                         reader: replaceReader,
@@ -85,7 +108,7 @@ namespace LazyDataReader
             return result;
         }
 
-        private static T GetDataFromFile<T>(string path, bool replaceCommaInNumbers,
+        private static T GetDataFromFile<T>(string path, bool replaceCommaInNumbers, bool removeNamespaces,
             string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
@@ -107,6 +130,7 @@ namespace LazyDataReader
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
                     replaceCommaInNumbers: replaceCommaInNumbers,
+                    removeNamespaces: removeNamespaces,
                     classNamespace: classNamespace,
                     additionalNamespaces: additionalNamespaces);
             }
@@ -120,7 +144,7 @@ namespace LazyDataReader
             return result;
         }
 
-        private static T GetDataFromText<T>(string text, bool replaceCommaInNumbers,
+        private static T GetDataFromText<T>(string text, bool replaceCommaInNumbers, bool removeNamespaces,
             string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
@@ -133,6 +157,7 @@ namespace LazyDataReader
                 result = GetData<T>(
                     textReaderGetter: textReaderGetter,
                     replaceCommaInNumbers: replaceCommaInNumbers,
+                    removeNamespaces: removeNamespaces,
                     classNamespace: classNamespace,
                     additionalNamespaces: additionalNamespaces);
             }
@@ -142,15 +167,6 @@ namespace LazyDataReader
                     message: $"The text '{text}' cannot be red.",
                     innerException: exception);
             }
-
-            return result;
-        }
-
-        private static TextReader GetReplaceReader(this TextReader textReader, bool replaceCommaInNumbers)
-        {
-            var result = replaceCommaInNumbers
-                ? new CommaReplaceReader(textReader)
-                : textReader;
 
             return result;
         }
