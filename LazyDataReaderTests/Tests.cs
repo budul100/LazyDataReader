@@ -51,6 +51,17 @@ namespace LazyDataReaderTests
         }
 
         [Test]
+        public void SetEncoding()
+        {
+            var data = Reader.GetFromFile<RailML2.RailML>(
+                path: @"..\..\..\railML\Example_Abbreviations.xml",
+                encoding: System.Text.Encoding.UTF8,
+                classNamespace: "http://www.railml.org/schemas/2013");
+
+            Assert.True(data.Infrastructure.OperationControlPoints[6].Abbrevation == "2°VA");
+        }
+
+        [Test]
         public void TestClassOAttrNS()
         {
             var data = Reader.GetFromFile<TrafficNetworkWNS.TrafficNetwork>(

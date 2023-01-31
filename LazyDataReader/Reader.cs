@@ -3,6 +3,7 @@ using LazyDataReader.Readers;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace LazyDataReader
@@ -12,25 +13,28 @@ namespace LazyDataReader
         #region Public Methods
 
         public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false, bool removeNamespaces = false,
-            string classNamespace = default, IEnumerable<string> additionalNamespaces = default)
+            Encoding encoding = default, string classNamespace = default,
+            IEnumerable<string> additionalNamespaces = default)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
                 replaceCommaInNumbers: replaceCommaInNumbers,
                 removeNamespaces: removeNamespaces,
+                encoding: encoding,
                 classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
 
         public static T GetFromFile<T>(string path, bool replaceCommaInNumbers = false, bool removeNamespaces = false,
-            string classNamespace = default, params string[] additionalNamespaces)
+            Encoding encoding = default, string classNamespace = default, params string[] additionalNamespaces)
             where T : class
         {
             return GetDataFromFile<T>(
                 path: path,
                 replaceCommaInNumbers: replaceCommaInNumbers,
                 removeNamespaces: removeNamespaces,
+                encoding: encoding,
                 classNamespace: classNamespace,
                 additionalNamespaces: additionalNamespaces);
         }
@@ -109,7 +113,7 @@ namespace LazyDataReader
         }
 
         private static T GetDataFromFile<T>(string path, bool replaceCommaInNumbers, bool removeNamespaces,
-            string classNamespace, IEnumerable<string> additionalNamespaces)
+            Encoding encoding, string classNamespace, IEnumerable<string> additionalNamespaces)
             where T : class
         {
             if (!File.Exists(path))
@@ -121,7 +125,8 @@ namespace LazyDataReader
 
             try
             {
-                var encoding = path.GetEncoding();
+                encoding = encoding
+                    ?? path.GetEncoding();
 
                 TextReader textReaderGetter() => new StreamReader(
                     path: path,
