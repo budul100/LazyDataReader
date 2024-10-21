@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<railml xmlns="https://www.railml.org/schemas/2021" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rhb="https://www.rhb.ch/2020/rhbCustomTypes">
+  <infrastructure id="infra-1445">
+    <operationControlPoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="rhb:operationControlPoints">
+      <ocp code="CH" id="ocp-21" name="Chur" rhb:minChangeTime="P0Y0M0DT0H3M0S" rhb:showTrackInfo="true" xsi:type="rhb:rhbOcp">
+        <additionalName name="Chur" type="other:name" xml:lang="de" />
+        <additionalName name="Chur" type="other:name" xml:lang="it" />
+        <propOperational operationalType="station" />
+        <geoCoord coord="759357.0 191283.0" epsgCode="21781" />
+        <designator entry="8509000" register="DIDOK" />
+      </ocp>
+      <rhb:ocpCultureMappings>
+        <rhb:ocpCultureMappingForStation rhb:ref="ocp-21">
+          <rhb:culture rhb:priority="1" xml:lang="de" />
+          <rhb:culture rhb:priority="2" xml:lang="en" />
+        </rhb:ocpCultureMappingForStation>
+      </rhb:ocpCultureMappings>
+    </operationControlPoints>
+  </infrastructure>
+</railml>

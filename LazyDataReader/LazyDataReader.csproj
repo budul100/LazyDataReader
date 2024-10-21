@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>LazyDataReader</AssemblyName>
-    <AssemblyVersion>1.16.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <Authors>budul</Authors>
@@ -44,7 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="UTF.Unknown" Version="2.5.0" />
+    <PackageReference Include="UTF.Unknown" Version="2.5.1" />
   </ItemGroup>
 
 </Project>
