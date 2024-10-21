@@ -1,5 +1,5 @@
 # LazyDataReader
 
-XML reader with namespace ignoration.
+This is an XML reader that allows ignoring elements of the XML tags and dealing with additional or missing namespaces.
 
-The respective NuGet package can be found on https://www.nuget.org/packages/budul.LazyDataReader.
+The respective NuGet package can be found at https://www.nuget.org/packages/budul.LazyDataReader.
